@@ -1,0 +1,11 @@
+.basic-course-info-title {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 300px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}

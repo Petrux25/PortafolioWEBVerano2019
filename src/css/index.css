@@ -1,0 +1,21 @@
+@import "./basic-course-info.css";
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans'), url('../assets/fonts/ProductSans-Regular.woff') format('woff');
+}
+
+html {
+    font-family: 'Product Sans';
+    margin-left: 15%;
+    margin-right: 15%;
+    background: #25262d;
+    color: white;
+}
+
+h1 {
+    font-size: -webkit-xxx-large;
+}
+
