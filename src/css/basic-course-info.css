@@ -1,11 +1,11 @@
-.basic-course-info-title {
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.main-content {
+    padding: 250px 15px 250px;
+}
+.basic-course-info {
+    background-image: url("../assets/img/header-img.png");
+    background-position: center;
     background-size: cover;
-    height: 300px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
+    color: #FFF;
+    width: 100%;
+    text-align: center;
 }
