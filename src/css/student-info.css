@@ -13,3 +13,13 @@
 .interest-title {
     padding-top: 14px;
 }
+.profile-image {
+    background-image: url("../assets/img/profile-image.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    margin-top: 120px;
+    margin-left: 120px;
+    text-align: center;
+    border-radius: 1000px;
+}
