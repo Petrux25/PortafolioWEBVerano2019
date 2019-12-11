@@ -1,6 +1,6 @@
 @import "./basic-course-info.css";
 @import "./student-info.css";
-
+@import "./course.css";
 @font-face {
     font-family: 'Product Sans';
     font-style: normal;
