@@ -2,7 +2,7 @@ meses=["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
 lasemana=["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
 diassemana=["lun", "mar", "mié", "jue", "vie", "sáb", "dom"];
 
-function loadcal() {
+window.onload = function() {
     hoy=new Date();
     diasemhoy= hoy.getDay();
     diahoy=hoy.getDate();
