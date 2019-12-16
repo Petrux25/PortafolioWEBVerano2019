@@ -1,67 +1,163 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="https://kit.fontawesome.com/f06aa88a92.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f06aa88a92.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css"
+      integrity="sha256-bLNUHzSMEvxBhoysBE7EXYlIrmo7+n7F4oJra1IgOaM="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"
+      integrity="sha256-JIBDRWRB0n67sjMusTy4xZ9L09V8BINF0nd/UUUOi48="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function() {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener(
+                "submit",
+                function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add("was-validated");
+                },
+                false
+              );
+            });
+          },
+          false
+        );
+      })();
+    </script>
+    <script>
+      $(function() {
+        $("#datepicker").datepicker();
+      });
+    </script>
+  </head>
 
-<body>
+  <body>
     <div class="container content">
-        <div class="row justify-content-md-center">
-            <div class="col col-lg-12">
-                <div class="text-center">
-                    <h2>
-                        Registro
-                    </h2>
-                </div>
-                <form>
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" />
-                    </div>
-                    <div class="form-group">
-                        <label for="apellido">Apellidos</label>
-                        <input type="text" class="form-control" id="apellido" />
-                    </div>
-                    <div class="form-group">
-                        <label for="identificacion">Identificación</label>
-                        <input type="text" class="form-control" id="identificacion" />
-                    </div>
-                    <div class="form-group">
-                        <label for="fechaNacimiento">Fecha de nacimiento</label>
-                        <input type="text" class="form-control" id="fechaNacimiento" />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo electronico</label>
-                        <input type="text" class="form-control" id="email" />
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono">Número de telefono</label>
-                        <input type="text" class="form-control" id="telefono" />
-                    </div>
-                    <div class="form-group">
-                        <label for="contrasena">Contraseña</label>
-                        <input type="password" class="form-control" id="contrasena" />
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Registrarse</button>
-                </form>
+      <div class="row justify-content-md-center">
+        <div class="col col-lg-12">
+          <div class="text-center">
+            <h2>
+              Registro
+            </h2>
+          </div>
+          <form class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required />
+              <div class="invalid-feedback">
+                Por favor proporcione su nombre
+              </div>
             </div>
-        </div>
-    </div>
-</body>
+            <div class="form-group">
+              <label for="apellido">Apellidos</label>
+              <input type="text" class="form-control" id="apellido" required />
+              <div class="invalid-feedback">
+                Por favor proporcione sus apellidos
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="identificacion">Identificación</label>
+              <input
+                type="text"
+                class="form-control"
+                id="identificacion"
+                required
+              />
+              <div class="invalid-feedback">
+                Por favor proporcione su identificación
+              </div>
+            </div>
 
+            <div class="form-group date">
+              <label for="datepicker">Fecha de nacimiento</label>
+              <input
+                id="datepicker"
+                type="text"
+                class="form-control"
+                required
+              />
+              <div class="invalid-feedback">
+                Por favor proporcione su fecha de nacimiento
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electronico</label>
+              <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" id="email" required />
+              <div class="invalid-feedback">
+                Por favor proporcione un correo valido
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Número de telefono</label>
+              <input type="text" class="form-control" id="telefono" required />
+              <div class="invalid-feedback">
+                Por favor proporcione su numero de telefono
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contrasena">Contraseña</label>
+              <input
+                type="password"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                class="form-control"
+                id="contrasena"
+                required
+              />
+              <div class="invalid-feedback">
+                Por favor proporcione una contraseña con un mínimo 8 de longitud, debe contener una combinación de
+                letras mayúsculas, minúsculas y números
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
