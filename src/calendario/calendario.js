@@ -2,7 +2,7 @@ meses=["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto",
 lasemana=["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
 diassemana=["lun", "mar", "mié", "jue", "vie", "sáb", "dom"];
 
-window.onload = function() {
+function initCalendar(){
     hoy=new Date();
     diasemhoy= hoy.getDay();
     diahoy=hoy.getDate();
@@ -16,10 +16,10 @@ window.onload = function() {
     f0 = document.getElementById("fila0");
 
     pie = document.getElementById("fechaactual");
-
+    pie = "HOY:"
     pie.innerHTML += lasemana[diasemhoy] + ",  " + diahoy + " de " + meses[meshoy] + " de " + annohoy;
 
-    document.buscar.buscaanno.value = annohoy;
+    $("#buscaanno").val(annohoy);
 
     mescal = meshoy
     annocal = annohoy;
@@ -27,7 +27,8 @@ window.onload = function() {
     cabecera()
     primeralinea()
     escribirdias()
-}
+};
+
 
 function cabecera() {
     tit.innerHTML = meses[mescal] + " de "+ annocal;
