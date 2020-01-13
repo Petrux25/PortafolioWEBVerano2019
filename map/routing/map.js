@@ -10,8 +10,8 @@ let w =  []
 waypoints.forEach(element => {
   w.push(L.latLng(element.lat, element.lng))
 });
-geocoder = L.Control.Geocoder.nominatim();
-routingPlan = L.Routing.plan(w, {
+let geocoder = L.Control.Geocoder.nominatim();
+let routingPlan = L.Routing.plan(w, {
 createMarker: (index, waypoint) => {
   if (waypoints[0]) {
     return L.marker(waypoint.latLng, {
