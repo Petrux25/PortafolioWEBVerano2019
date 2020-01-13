@@ -10,6 +10,19 @@ let w =  []
 waypoints.forEach(element => {
   w.push(L.latLng(element.lat, element.lng))
 });
+geocoder = L.Control.Geocoder.nominatim();
+routingPlan = L.Routing.plan(w, {
+createMarker: (index, waypoint) => {
+  if (waypoints[0]) {
+    return L.marker(waypoint.latLng, {
+      draggable: false
+    })
+  }
+},
+geocoder: geocoder,
+routeWhileDragging: false
+});
 L.Routing.control({
-    waypoints: w
-  }).addTo(mymap);
+    plan:routingPlan
+    
+}).addTo(mymap);
